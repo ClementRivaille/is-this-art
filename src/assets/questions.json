@@ -1,0 +1,28 @@
+[
+  {
+    "img": "assets/img/circles-egypt.png",
+    "label": "Circular fields in Egypt",
+    "audio": {
+      "question": "audio/1/question.ogg",
+      "yes": "audio/1/yes.ogg",
+      "no": "audio/1/no.ogg"
+    }
+  },
+  {
+    "img": "assets/img/gaugan_input.png",
+    "label": "A drawing of a mountain and a lake",
+    "audio": {
+      "question": "audio/2/question.ogg",
+      "yes": "audio/2/yes.ogg",
+      "no": "audio/2/no.ogg"
+    }
+  },
+  {
+    "img": "/img/3.png",
+    "audio": {
+      "question": "audio/3/question.ogg",
+      "yes": "audio/3/yes.ogg",
+      "no": "audio/3/no.ogg"
+    }
+  }
+]

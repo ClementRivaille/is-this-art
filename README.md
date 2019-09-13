@@ -1,19 +1,6 @@
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# Is This Art
 
----
-
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+**Is This Art** is a web game where the player has to determine what is Art, and is Not-Art. They are guided by an “Art Expert”, whose job consist mostly of telling them if they are right or wrong, and bragging a lot.
 
 
 ## Get started

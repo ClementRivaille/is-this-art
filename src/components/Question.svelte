@@ -1,6 +1,10 @@
 <script>
 export let question
 export let onAnswer
+
+export let showResult
+export let answer
+export let isArt
 </script>
 
 <div class="question">
@@ -8,8 +12,24 @@ export let onAnswer
     <img src="{question.img}" alt="{question.label}"/>
 
   <div class="buttons">
-    <button on:click={() => onAnswer(true)}>Yes</button>
-    <button on:click={() => onAnswer(false)}>No</button>
+    <button 
+      class:selected={showResult && answer}
+      class:answer="{showResult && isArt}"
+      class:right="{showResult && isArt && answer}"
+      class:wrong="{showResult && isArt && !answer}"
+      disabled={showResult}
+      on:click={() => onAnswer(true)}>
+        Yes
+      </button>
+    <button 
+      class:selected={showResult && !answer}
+      class:answer="{showResult && !isArt}"
+      class:right="{showResult && !isArt && !answer}"
+      class:wrong="{showResult && !isArt && answer}"
+      disabled={showResult}
+      on:click={() => onAnswer(false)}>
+        No
+      </button>
   </div>
 </div>
 
@@ -41,6 +61,9 @@ export let onAnswer
     background-color: white;
     cursor: pointer;
   }
+  button:disabled {
+    opacity: 0.8;
+  }
 
   .buttons {
     display: flex;
@@ -49,5 +72,18 @@ export let onAnswer
   }
   .buttons > * {
     width: 45%;
+  }
+
+  button.selected {
+    border: 2px solid black;
+  }
+  button.answer {
+    font-weight: bold;
+  }
+  .wrong {
+    background-color: red;
+  }
+  .right {
+    background-color: green;
   }
 </style>

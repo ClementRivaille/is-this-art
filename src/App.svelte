@@ -16,12 +16,14 @@
 			answer: value,
 			isArt: Math.random() > 0.5 ? true : false
 		})
-		quizz.index.increment()
+		// quizz.index.increment()
+		quizz.showResults.set(true)
 	}
 
 	const questionIndex = quizz.index
 	const currentQuestion = quizz.currentQuestion
 	const questions = quizz.questions
+	const showResults = quizz.showResults
 </script>
 
 <style>
@@ -36,5 +38,5 @@
 {/if}
 {#if $questionIndex > -1}
 	{$questionIndex}
-	<Question question={$currentQuestion} onAnswer={answer}/>
+	<Question question={$currentQuestion} onAnswer={answer} showResult={$showResults} isArt={$currentQuestion.isArt} answer={$currentQuestion.answer} />
 {/if}

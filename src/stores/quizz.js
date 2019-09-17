@@ -32,7 +32,8 @@ function createQuizzStore(questionsList) {
       reset: () => score.set(0),
       update: valid => score.update(n => valid ? n + 1 : n)
     },
-    currentQuestion: derived([questions, index], ([$questions, $index]) => $questions[$index])
+    currentQuestion: derived([questions, index], ([$questions, $index]) => $questions[$index]),
+    showResults: writable(false)
   }
 }
 
